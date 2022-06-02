@@ -15,7 +15,7 @@ const logger = function (scope) {
       scope: scope,
       application: CONSTANTS.APPLICATION_NAME,
       get time() {
-        return moment().format('YYYY-MM-DD HH:mm:ss.SSS');
+        return moment().utc().format('YYYY-MM-DDTHH:mm:ss.SSS[Z]');
       }
     }
   };
