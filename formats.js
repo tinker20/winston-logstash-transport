@@ -11,8 +11,8 @@ const CONSTANTS = require('./constants');
 const print = winston.format.printf((info, op) => {
   Object.keys(info).forEach(eachKey => {
     if (info[eachKey] instanceof Error) {
-      info.stack = info[eachKey].stack;
-      info.error = info[eachKey].message;
+      // info.stack = info[eachKey].stack;
+      info.error = typeof info[eachKey].message === 'string' ? info[eachKey].message : '';
     }
     else if (typeof info[eachKey] !== 'string' && CONSTANTS.NODE_ENV !== 'development') {
       info[eachKey] = JSON.stringify(info[eachKey]);
