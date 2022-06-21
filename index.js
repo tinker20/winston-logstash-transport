@@ -52,7 +52,7 @@ const logger = function (scope) {
         dirname: logDirectory,
         filename: 'default-%DATE%.log',
         datePattern: 'YYYY-MM-DD-HH',
-        zippedArchive: true,
+        zippedArchive: false,
         maxSize: '20m',
         maxFiles: '7d'
       }));
