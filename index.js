@@ -53,7 +53,7 @@ const logger = function (scope) {
         filename: 'default-%DATE%.log',
         datePattern: 'YYYY-MM-DD-HH',
         zippedArchive: false,
-        maxSize: '20m',
+        //maxSize: '20m',
         maxFiles: '2d'
       }));
       log = winston.createLogger({
